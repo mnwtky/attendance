@@ -1,0 +1,60 @@
+@page
+@model attendance.Pages.attendances.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Attendance[0].WorkingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Attendance[0].ClonkingIn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Attendance[0].ClockingOut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Attendance[0].BreakeTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Attendance[0].WorkingTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Attendance) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClonkingIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClockingOut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BreakeTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkingTime)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

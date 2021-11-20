@@ -13,11 +13,11 @@ namespace attendance.Migrations
                 {
                     ID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    WorkingDate = table.Column<string>(type: "TEXT", nullable: true),
+                    WorkingDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     ClonkingIn = table.Column<DateTime>(type: "TEXT", nullable: false),
                     ClockingOut = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    BreakeTime = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    WorkingTime = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    BreakeTime = table.Column<decimal>(type: "TEXT", nullable: false),
+                    WorkingTime = table.Column<decimal>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

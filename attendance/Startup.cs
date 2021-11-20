@@ -37,6 +37,9 @@ namespace attendance
 
             services.AddDbContext<AttendanceContext>(options =>
                     options.UseSqlite(Configuration.GetConnectionString("AttendanceContext")));
+
+            services.AddDbContext<EmployeeContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("EmployeeContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

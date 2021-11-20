@@ -21,7 +21,7 @@ namespace attendance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("BreakeTime")
+                    b.Property<decimal>("BreakeTime")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ClockingOut")
@@ -30,10 +30,10 @@ namespace attendance.Migrations
                     b.Property<DateTime>("ClonkingIn")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("WorkingDate")
+                    b.Property<DateTime>("WorkingDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("WorkingTime")
+                    b.Property<decimal>("WorkingTime")
                         .HasColumnType("TEXT");
 
                     b.HasKey("ID");

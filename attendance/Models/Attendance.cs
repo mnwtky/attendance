@@ -41,5 +41,7 @@ namespace attendance.Models
         [Display(Name = "実働時間")]
         [Required(AllowEmptyStrings = true)]
         public decimal WorkingTime { get; set; }
+
+        public Employee Employee { get; set; }
     }
 }

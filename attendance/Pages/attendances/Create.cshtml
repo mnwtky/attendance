@@ -5,9 +5,8 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>打刻</h1>
 
-<h4>Attendance</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,38 +14,38 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Attendance.WorkingDate" class="control-label"></label>
-                <input asp-for="Attendance.WorkingDate" class="form-control" />
+                <input asp-for="Attendance.WorkingDate" class="form-control" value=@DateTime.Now.ToString("yyyy-MM-dd") />
                 <span asp-validation-for="Attendance.WorkingDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Attendance.ClonkingIn" class="control-label"></label>
-                <input asp-for="Attendance.ClonkingIn" class="form-control" />
+                <input asp-for="Attendance.ClonkingIn" class="form-control" value=@DateTime.Now.ToString("09:00") />
                 <span asp-validation-for="Attendance.ClonkingIn" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Attendance.ClockingOut" class="control-label"></label>
-                <input asp-for="Attendance.ClockingOut" class="form-control" />
+                <input asp-for="Attendance.ClockingOut" class="form-control" value=@DateTime.Now.ToString("18:00") />
                 <span asp-validation-for="Attendance.ClockingOut" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Attendance.BreakeTime" class="control-label"></label>
-                <input asp-for="Attendance.BreakeTime" class="form-control" />
+                <input asp-for="Attendance.BreakeTime" class="form-control" value="1" />
                 <span asp-validation-for="Attendance.BreakeTime" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Attendance.WorkingTime" class="control-label"></label>
-                <input asp-for="Attendance.WorkingTime" class="form-control" />
+                <input asp-for="Attendance.WorkingTime" class="form-control" value="8" />
                 <span asp-validation-for="Attendance.WorkingTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="勤怠登録" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">一覧へ戻る</a>
 </div>
 
 @section Scripts {

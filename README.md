@@ -2,20 +2,18 @@
 
 ## Employee テーブル
 
-| Column     | Type   | Options     |
-| ---------- | ------ | ----------- |
-| email      | string | null: false |
-| password   | string | null: false |
-| name       | string | null: false |
-| profile    | text   | null: false |
-| occupation | text   | null: false |
-| position   | text   | null: false |
-
+| Column     | Type   | Options         |
+| ---------- | ------ | --------------- |
+| ID         | int    | nullable: false |
+| Name       | string | nullable: false |
+| Email      | string | nullable: false |
+| password   | string | nullable: false |
 
 ## Attendance テーブル
 
 | Column      | Type      | Options         |
 | ----------- | --------- | --------------- |
+| ID          | int       | nullable: false |
 | WorkingDate | DateTime  | nullable: false |
 | ClonkingIn  | DateTime  | nullable: false |
 | ClockingOut | DateTime  | nullable: false |

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace attendance.Migrations
 {
     [DbContext(typeof(AttendanceContext))]
-    [Migration("20211118080831_InitialCreate")]
+    [Migration("20211120095701_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,7 +23,7 @@ namespace attendance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("BreakeTime")
+                    b.Property<decimal>("BreakeTime")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ClockingOut")
@@ -32,10 +32,10 @@ namespace attendance.Migrations
                     b.Property<DateTime>("ClonkingIn")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("WorkingDate")
+                    b.Property<DateTime>("WorkingDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("WorkingTime")
+                    b.Property<decimal>("WorkingTime")
                         .HasColumnType("TEXT");
 
                     b.HasKey("ID");

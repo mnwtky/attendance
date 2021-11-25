@@ -1,3 +1,6 @@
+<img width="402" alt="スクリーンショット 2021-11-25 13 13 05" src="https://user-images.githubusercontent.com/69100365/143378794-5e68abf4-f986-4c5f-b0e6-668d20293d03.png">
+
+
 # テーブル設計
 
 ## Employee テーブル

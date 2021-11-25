@@ -21,3 +21,4 @@
 | ClockingOut | DateTime  | nullable: false |
 | BreakeTime  | decimal   | nullable: false |
 | WorkingTime | decimal   | nullable: false |
+| EmployeeID  | int       | nullable: true  |

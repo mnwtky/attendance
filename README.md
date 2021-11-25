@@ -14,9 +14,10 @@
 
 ## Attendance テーブル
 
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| title        | string     | null: false                    |
-| catch_copy   | text       | null: false                    |
-| concept      | text       | null: false                    |
-| user         | references | null: false, foreign_key: true |
+| Column      | Type      | Options         |
+| ----------- | --------- | --------------- |
+| WorkingDate | DateTime  | nullable: false |
+| ClonkingIn  | DateTime  | nullable: false |
+| ClockingOut | DateTime  | nullable: false |
+| BreakeTime  | decimal   | nullable: false |
+| WorkingTime | decimal   | nullable: false |
